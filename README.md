@@ -5,7 +5,7 @@
 
 ##  项目架构
 quant_project/
-├── .env # 环境变量（敏感配置，已加入 gitignore）
+├── .env # 环境变量（敏感配置）
 ├── config.py # 全局参数配置
 ├── db_manager.py # 数据库 ORM 封装 + 原子 Upsert 写入
 ├── sync_status.py # 增量同步状态管理（断点续传）
