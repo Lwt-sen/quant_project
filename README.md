@@ -4,19 +4,19 @@
 基于 Python + MySQL 构建的工业级量化数据中台与策略回测系统，覆盖行情数据同步、数据质量治理、策略回测、因子绩效分析、可视化报告全链路。
 
 ##  项目架构
-quant_project/
-├── .env # 环境变量（敏感配置）
-├── config.py # 全局参数配置
-├── db_manager.py # 数据库 ORM 封装 + 原子 Upsert 写入
-├── sync_status.py # 增量同步状态管理（断点续传）
-├── data_quality.py # 数据质量校验体系
-├── data_loader.py # 行情数据加载 + 因子计算
-├── strategy.py # 均线多股票调仓策略
-├── backtest_engine.py # 回测引擎封装
-├── factor_analysis.py # IC/IR/ 阿尔法 / 分位数因子分析
-├── visualization.py # Plotly 交互式可视化报告
-├── monitor.py # 同步运维监控与报告
-└── main.py # 主程序入口
+quant_project
+.env # 环境变量（敏感配置）
+config.py # 全局参数配置
+db_manager.py # 数据库 ORM 封装 + 原子 Upsert 写入
+sync_status.py # 增量同步状态管理（断点续传）
+data_quality.py # 数据质量校验体系
+data_loader.py # 行情数据加载 + 因子计算
+strategy.py # 均线多股票调仓策略
+backtest_engine.py # 回测引擎封装
+factor_analysis.py # IC/IR/ 阿尔法 / 分位数因子分析
+visualization.py # Plotly 交互式可视化报告
+monitor.py # 同步运维监控与报告
+main.py # 主程序入口
 
 ##  核心特性
 - **数据工程化**：Tushare 行情增量同步 + 断点续传，MySQL Upsert 原子写入，唯一键保障数据一致性
@@ -61,8 +61,3 @@ quant_project/
 - **分位数检验**：验证因子收益单调性，排除极端值干扰
 - **阿尔法归因**：基于CAPM模型拆解超额收益
 - **收益分布分析**：中位数、偏度、峰度，评估收益结构健康度
-
-## 快速开始
-### 环境依赖
-```bash
-pip install -r requirements.txt
